@@ -1,0 +1,61 @@
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { navRoutes } from '../../routes';
+import { VisuallyHidden } from '../a11y/VisuallyHidden';
+
+type HeaderProps = {
+  activePath: string;
+  navigate: (href: string) => void;
+};
+
+export function Header({ activePath, navigate }: HeaderProps) {
+  const [open, setOpen] = useState(false);
+
+  const go = (href: string) => {
+    setOpen(false);
+    navigate(href);
+  };
+
+  return (
+    <header className="site-header">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+      <div className="container header-inner">
+        <button className="brand-mark" onClick={() => go('/')} type="button">
+          VAI
+        </button>
+        <nav className="desktop-nav" aria-label="Primary navigation">
+          {navRoutes.map((route) => (
+            <button
+              className={activePath === route.path ? 'nav-link active' : 'nav-link'}
+              key={route.path}
+              onClick={() => go(route.path)}
+              type="button"
+            >
+              {route.label}
+            </button>
+          ))}
+        </nav>
+        <button className="icon-button mobile-menu-button" onClick={() => setOpen((value) => !value)} type="button">
+          {open ? <X size={20} /> : <Menu size={20} />}
+          <VisuallyHidden>{open ? 'Close navigation' : 'Open navigation'}</VisuallyHidden>
+        </button>
+      </div>
+      {open ? (
+        <nav className="mobile-nav" aria-label="Mobile navigation">
+          {navRoutes.map((route) => (
+            <button
+              className={activePath === route.path ? 'mobile-nav-link active' : 'mobile-nav-link'}
+              key={route.path}
+              onClick={() => go(route.path)}
+              type="button"
+            >
+              {route.label}
+            </button>
+          ))}
+        </nav>
+      ) : null}
+    </header>
+  );
+}
