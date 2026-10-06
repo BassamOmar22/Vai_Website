@@ -4,6 +4,7 @@ export type ContactPayload = {
   name: string;
   email: string;
   company: string;
+  role: string;
   industry: string;
   message: string;
   consent: boolean;

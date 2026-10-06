@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navRoutes } from '../../routes';
 import { VisuallyHidden } from '../a11y/VisuallyHidden';
 
@@ -10,6 +10,14 @@ type HeaderProps = {
 
 export function Header({ activePath, navigate }: HeaderProps) {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const go = (href: string) => {
     setOpen(false);
@@ -17,7 +25,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -28,7 +36,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navRoutes.map((route) => (
             <button
-              className={activePath === route.path ? 'nav-link active' : 'nav-link'}
+              className={`${route.path === '/contact' ? 'nav-link nav-contact' : 'nav-link'} ${activePath === route.path ? 'active' : ''}`}
               key={route.path}
               onClick={() => go(route.path)}
               type="button"
@@ -42,8 +50,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
           <VisuallyHidden>{open ? 'Close navigation' : 'Open navigation'}</VisuallyHidden>
         </button>
       </div>
-      {open ? (
-        <nav className="mobile-nav" aria-label="Mobile navigation">
+      <nav className={`mobile-nav ${open ? 'is-open' : ''}`} aria-label="Mobile navigation" aria-hidden={!open}>
           {navRoutes.map((route) => (
             <button
               className={activePath === route.path ? 'mobile-nav-link active' : 'mobile-nav-link'}
@@ -54,8 +61,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
               {route.label}
             </button>
           ))}
-        </nav>
-      ) : null}
+      </nav>
     </header>
   );
 }

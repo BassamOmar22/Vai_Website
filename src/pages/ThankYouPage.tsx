@@ -5,7 +5,7 @@ import type { PageProps } from '../routes';
 export function ThankYouPage({ navigate }: PageProps) {
   return (
     <ResponsiveContainer className="narrow-page">
-      <ConfirmationState reference="[Awaiting VAI master copy: THANK-YOU TY01 REFERENCE]" onNext={() => navigate('/')} />
+      <ConfirmationState reference="VAI-ENQUIRY" onNext={() => navigate('/')} />
     </ResponsiveContainer>
   );
 }

@@ -5,7 +5,7 @@ export function FormStatus({ status, reference }: { status: string; reference?: 
     return (
       <p className="form-status">
         <LoaderCircle className="spin" size={16} />
-        Submitting enquiry
+        Sending enquiry...
       </p>
     );
   }
@@ -14,7 +14,7 @@ export function FormStatus({ status, reference }: { status: string; reference?: 
     return (
       <p className="form-status success">
         <CheckCircle2 size={16} />
-        Confirmation reference {reference}
+        Enquiry received. Reference {reference}
       </p>
     );
   }
@@ -23,7 +23,7 @@ export function FormStatus({ status, reference }: { status: string; reference?: 
     return (
       <p className="form-status warning">
         <RotateCcw size={16} />
-        Backend error state ready. Retry is available.
+        The enquiry could not be sent. Please try again.
       </p>
     );
   }

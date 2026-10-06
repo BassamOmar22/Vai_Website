@@ -4,11 +4,11 @@ export function ConfirmationState({ reference, onNext }: { reference: string; on
   return (
     <section className="confirmation-state" id="confirmation">
       <CheckCircle2 size={34} />
-      <h1>[Awaiting VAI master copy: THANK-YOU TY01 HEADING]</h1>
-      <p>[Awaiting VAI master copy: THANK-YOU TY01 BODY]</p>
+      <h1>Enquiry received.</h1>
+      <p>Thank you for contacting VAI. Your enquiry has been recorded and will be reviewed.</p>
       <p className="reference">Reference: {reference}</p>
       <button className="button primary" onClick={onNext} type="button">
-        [Awaiting VAI master copy: THANK-YOU TY01 PRIMARY_CTA]
+        Return home
       </button>
     </section>
   );

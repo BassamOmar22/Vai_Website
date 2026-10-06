@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { industries, placeholder } from '../../site/content';
+import { contactCopy, industries } from '../../site/content';
 import { submitContact, type ContactPayload } from '../../utils/contact';
 import { ErrorMessage } from './ErrorMessage';
 import { FormStatus } from './FormStatus';
@@ -12,6 +12,7 @@ const initialPayload: ContactPayload = {
   name: '',
   email: '',
   company: '',
+  role: '',
   industry: '',
   message: '',
   consent: false,
@@ -37,7 +38,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
       return 'Please enter a valid email address.';
     }
     if (!payload.consent) {
-      return placeholder('CONTACT', 'CT01', 'CONSENT_TEXT');
+      return contactCopy.form.consent;
     }
     return '';
   };
@@ -75,7 +76,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
           <input autoComplete="name" onChange={(event) => update('name', event.target.value)} required value={payload.name} />
         </label>
         <label>
-          <span>Email</span>
+          <span>Work email</span>
           <input
             autoComplete="email"
             onChange={(event) => update('email', event.target.value)}
@@ -98,7 +99,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         <label>
           <span>Industry</span>
           <select onChange={(event) => update('industry', event.target.value)} value={payload.industry}>
-            <option value="">[Awaiting VAI master copy: CONTACT CT01 INDUSTRY_PLACEHOLDER]</option>
+            <option value="">Select an industry</option>
             {industries.map((industry) => (
               <option key={industry.key} value={industry.key}>
                 {industry.label}
@@ -108,20 +109,22 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
         </label>
       </div>
       <label>
+        <span>Role or title</span>
+        <input autoComplete="organization-title" onChange={(event) => update('role', event.target.value)} value={payload.role} />
+      </label>
+      <label>
         <span>Message</span>
         <textarea onChange={(event) => update('message', event.target.value)} required rows={7} value={payload.message} />
       </label>
       <label className="checkbox-field">
         <input checked={payload.consent} onChange={(event) => update('consent', event.target.checked)} type="checkbox" />
-        <span>{placeholder('CONTACT', 'CT01', 'CONSENT_TEXT')}</span>
+        <span>{contactCopy.form.consent}</span>
       </label>
       {error ? <ErrorMessage message={error} /> : null}
       <FormStatus reference={reference} status={status} />
       <div className="button-row">
         <button className="button primary" disabled={status === 'submitting'} type="submit">
-          {status === 'backend-error'
-            ? placeholder('CONTACT', 'CT01', 'RETRY_CTA')
-            : placeholder('CONTACT', 'CT01', 'SUBMIT_CTA')}
+          {status === 'submitting' ? contactCopy.form.sending : status === 'backend-error' ? 'Try again' : contactCopy.form.submit}
         </button>
       </div>
     </form>

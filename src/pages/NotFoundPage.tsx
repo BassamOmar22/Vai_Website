@@ -5,11 +5,9 @@ export function NotFoundPage({ navigate }: { navigate: (href: string) => void })
     <ResponsiveContainer className="narrow-page">
       <section className="not-found" id="not-found">
         <p className="eyebrow">404</p>
-        <h1>[Awaiting VAI master copy: 404 NF01 HEADING]</h1>
-        <p>[Awaiting VAI master copy: 404 NF01 BODY]</p>
-        <button className="button primary" onClick={() => navigate('/')} type="button">
-          [Awaiting VAI master copy: 404 NF01 PRIMARY_CTA]
-        </button>
+        <h1>This page is not available.</h1>
+        <p>The page may have moved, or the address may be incorrect. Return to the VAI homepage or explore the solution areas.</p>
+        <div className="button-row"><button className="button primary" onClick={() => navigate('/')} type="button">Return home</button><button className="button secondary dark" onClick={() => navigate('/solutions')} type="button">Explore solutions</button></div>
       </section>
     </ResponsiveContainer>
   );

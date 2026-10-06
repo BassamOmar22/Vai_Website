@@ -1,9 +1,10 @@
-export function ArchitectureDiagramBlock({ route = 'ARCHITECTURE-GOVERNANCE' }: { route?: string }) {
+export function ArchitectureDiagramBlock({ labels }: { labels: string[] }) {
   return (
-    <div className="architecture-block" role="img" aria-label="Architecture and governance diagram placeholder">
-      {['AG03 DATA_LAYER', 'AG03 DECISION_LAYER', 'AG03 WORKFLOW_LAYER', 'AG03 GOVERNANCE_LAYER'].map((label) => (
+    <div className="architecture-block" role="img" aria-label="Architecture and governance model">
+      <div className="architecture-connector" />
+      {labels.map((label, index) => (
         <div className="architecture-layer" key={label}>
-          [Awaiting VAI master copy: {route} {label}]
+          <span>{String(index + 1).padStart(2, '0')}</span>{label}
         </div>
       ))}
     </div>

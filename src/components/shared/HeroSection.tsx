@@ -8,9 +8,10 @@ type HeroSectionProps = {
   secondaryCta?: string;
   onPrimary?: () => void;
   onSecondary?: () => void;
+  visualLabels?: string[];
 };
 
-export function HeroSection({ eyebrow, heading, body, primaryCta, secondaryCta, onPrimary, onSecondary }: HeroSectionProps) {
+export function HeroSection({ eyebrow, heading, body, primaryCta, secondaryCta, onPrimary, onSecondary, visualLabels = ['VAI', 'Data', 'Workflow', 'Governance', 'Decision layer'] }: HeroSectionProps) {
   return (
     <section className="hero-section" id="hero">
       <div className="container hero-grid">
@@ -32,12 +33,10 @@ export function HeroSection({ eyebrow, heading, body, primaryCta, secondaryCta, 
             ) : null}
           </div>
         </div>
-        <div className="hero-panel" aria-label="VAI operating model placeholder">
+        <div className="hero-panel hero-visual" aria-label="VAI operating model">
           <div className="signal-line top" />
-          <div className="diagram-node large">VAI</div>
-          <div className="diagram-node">Data</div>
-          <div className="diagram-node">Workflow</div>
-          <div className="diagram-node">Governance</div>
+          <div className="data-pulse" />
+          {visualLabels.slice(0, 5).map((label, index) => <div className={`diagram-node ${index === 0 ? 'large' : ''}`} key={label}>{label}</div>)}
           <div className="signal-line bottom" />
         </div>
       </div>
