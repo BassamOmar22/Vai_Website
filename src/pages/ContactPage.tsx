@@ -22,6 +22,7 @@ export function ContactPage({ navigate }: PageProps) {
     <>
       <HeroSection
         {...contactCopy.hero}
+        compact
         onPrimary={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
       />
       <ResponsiveContainer className="narrow-page">
