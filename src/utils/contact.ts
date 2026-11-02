@@ -12,32 +12,42 @@ export type ContactPayload = {
 
 export type ContactResult = { ok: true; reference: string } | { ok: false; message: string };
 
-export async function submitContact(payload: ContactPayload): Promise<ContactResult> {
-  const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
+let pendingSubmission: { fingerprint: string; id: string } | undefined;
 
-  if (!endpoint) {
-    await new Promise((resolve) => setTimeout(resolve, 700));
-    trackContactSubmit('local-confirmation');
-    return { ok: true, reference: `VAI-${Date.now().toString(36).toUpperCase()}` };
-  }
+function trackSubmission(status: string) {
+  try { trackContactSubmit(status); } catch { /* Optional analytics cannot change an email's delivery result. */ }
+}
+
+export async function submitContact(payload: ContactPayload): Promise<ContactResult> {
+  const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/api/contact';
 
   try {
+    const fingerprint = JSON.stringify(payload);
+    if (pendingSubmission?.fingerprint !== fingerprint) {
+      pendingSubmission = { fingerprint, id: crypto.randomUUID() };
+    }
+    const submission = pendingSubmission;
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'application/json', 'Idempotency-Key': submission.id },
+      body: fingerprint,
+      signal: AbortSignal.timeout(15000),
     });
 
+    const data = await response.json().catch(() => null) as { ok?: boolean; reference?: string; message?: string } | null;
     if (!response.ok) {
-      trackContactSubmit('backend-error');
+      trackSubmission('backend-error');
+      return { ok: false, message: response.status === 429 ? 'Too many enquiries. Please try again later.' : 'The enquiry could not be sent. Please retry.' };
+    }
+    if (data?.ok !== true || typeof data.reference !== 'string' || !data.reference.trim()) {
+      trackSubmission('backend-error');
       return { ok: false, message: 'The enquiry could not be sent. Please retry.' };
     }
-
-    const data = (await response.json().catch(() => ({}))) as { reference?: string };
-    trackContactSubmit('sent');
-    return { ok: true, reference: data.reference ?? `VAI-${Date.now().toString(36).toUpperCase()}` };
+    if (pendingSubmission === submission) pendingSubmission = undefined;
+    trackSubmission('sent');
+    return { ok: true, reference: data.reference };
   } catch {
-    trackContactSubmit('network-error');
+    trackSubmission('network-error');
     return { ok: false, message: 'A network issue prevented submission. Please retry.' };
   }
 }

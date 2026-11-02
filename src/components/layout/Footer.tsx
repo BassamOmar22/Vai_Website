@@ -1,5 +1,4 @@
 import { industries } from '../../site/content';
-import { ConsentControl } from '../shared/ConsentControl';
 
 export function Footer({ navigate }: { navigate: (href: string) => void }) {
   return (
@@ -8,7 +7,6 @@ export function Footer({ navigate }: { navigate: (href: string) => void }) {
         <div>
           <div className="footer-brand">VAI</div>
           <p className="footer-text">VAI helps teams turn business complexity into practical intelligence systems, clearer workflows, and governed decision support.</p>
-          <ConsentControl />
         </div>
         <div>
           <h2 className="footer-heading">Solutions</h2>

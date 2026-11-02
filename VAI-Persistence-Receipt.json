@@ -1,0 +1,41 @@
+{
+  "recorded": "2026-10-09",
+  "library_folder": "/VAI Website Frontend Design",
+  "library_folder_id": "6ac8f9e5b4748191864259af9c3fea07",
+  "library_save_status": "succeeded",
+  "saved_documents": [
+    {
+      "name": "VAI-Frontend-Design-Master.md",
+      "library_file_id": "libfile_8cd80c6533fc81919562cbcb1ad7af4a"
+    },
+    {
+      "name": "VAI-Codex-Visual-RD-Prompt.md",
+      "library_file_id": "libfile_81e5b1b215608191990e358db032b587"
+    },
+    {
+      "name": "VAI-Design-Comparison-Matrix.md",
+      "library_file_id": "libfile_f982a51ff9a081919ca79011a8d13052"
+    },
+    {
+      "name": "VAI-Design-Decision-Register.json",
+      "library_file_id": "libfile_4e3809fc2ee88191af56c7a7880bda72"
+    },
+    {
+      "name": "VAI-Project-Instructions.txt",
+      "library_file_id": "libfile_830597082d8081919b4ac5b3c7df49f6"
+    },
+    {
+      "name": "VAI-Frontend-Visual-Design-Original.txt",
+      "library_file_id": "libfile_1259f2d83440819187ddaef56881e20c"
+    }
+  ],
+  "memory": {
+    "initial_core_rules_update": "succeeded; tool confirmed Model set context updated",
+    "later_document_pointer_update": "failed; memory became disabled after an incompatible tool; the pointer was not saved"
+  },
+  "project_instructions_modified": false,
+  "project_sources_membership_modified": false,
+  "workspace_settings_modified": false,
+  "repository_changed": false,
+  "note": "Library persistence is not the same as Project Sources attachment. No guarantee of complete cross-chat memory coverage."
+}

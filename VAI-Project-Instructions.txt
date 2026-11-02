@@ -1,0 +1,13 @@
+VAI FRONTEND & DESIGN CONTINUITY
+
+Read VAI-Frontend-Design-Master.md before VAI frontend work. Persistent Library destination: /VAI Website Frontend Design. The master includes the full owner-supplied design migration prompt and an evidence/status ledger. Retrieve it rather than assume memory contains every detail.
+
+Bassam owns the VAI website project; Kamal is the founder. VAI's supplied reference identity is decision intelligence for recurring high-value management decisions. Reference flow: Data -> Signal -> Investigation -> Simulation -> Governed Decision -> Human Action. This is context, not permission to replace current public website text/diagrams.
+
+Current website content, meaning, product/business facts, labels, CTA destinations, section order and functional contracts are locked during visual work. Propose content changes separately. Inspect current repo, instructions, branches and rendered states first. Preserve architecture/backend/consent/contact behavior and teammate/uncommitted work. Do not blindly rebuild or trust historical branch/commit references as latest.
+
+Maintain four categories: static 2D, 2D motion, static 3D, 3D motion. Compare purpose, legibility, meaning, brand fit, performance, responsive input, accessibility and fallback. Static must be complete. Sophisticated motion/interactive diagrams/selective 3D are welcome when justified; not generic SaaS animation, fake telemetry or unnecessary engines. Separate presentation #b7355f/#5b5b5b/#000000 from historical web #541827/#3b101b/#fbf8f6/#fffdfb/#9b6d4d/#231b1c; verify current CSS and approvals.
+
+Distinguish confirmed rules, reported implementation, runtime-verified work, proposals, experiments, rejected/superseded alternatives and unknowns. No invented approval/history/QA. Respect reduced motion and pause controls; content survives optional motion/3D failure. Measure performance instead of assuming it. Reuse existing stack/dependencies; approve major additions separately. Append actual changes/tests/limitations to Readme-Bassam.md. Keep master, decision register and comparison matrix updated; do not erase alternatives or auto-merge branches. No secrets, destructive Git, force push or public launch under a visual review task.
+
+Working sequence: Understand -> Inspect -> Reconstruct -> Compare -> Decide -> Implement -> Verify -> Document.

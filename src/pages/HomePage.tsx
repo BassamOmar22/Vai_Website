@@ -11,7 +11,7 @@ import { home, industries } from '../site/content';
 
 export function HomePage({ navigate }: PageProps) {
   return <>
-    <HeroSection {...home.hero} onPrimary={() => navigate('/contact')} onSecondary={() => navigate('/solutions')} visualLabels={['VAI', 'Data', 'Workflow', 'Governance', 'Decision layer']} />
+    <HeroSection {...home.hero} onPrimary={() => navigate('/contact')} onSecondary={() => navigate('/solutions')} />
     <ResponsiveContainer>
       <Reveal><section className="section"><SectionHeader {...home.output} /><div className="grid three stagger-grid">{home.output.cards.map((card) => <CapabilityCard {...card} key={card.title} />)}</div></section></Reveal>
       <Reveal><section className="section"><SectionHeader {...home.method} /><div className="grid four stagger-grid method-grid">{home.method.steps.map((step, index) => <MethodStep {...step} key={step.title} step={`0${index + 1}`} />)}</div></section></Reveal>

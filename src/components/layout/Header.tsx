@@ -12,6 +12,21 @@ export function Header({ activePath, navigate }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const brandButton = useRef<HTMLButtonElement>(null);
+  const mobileNavigation = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 901px)');
+    const onDesktop = (event: MediaQueryListEvent) => {
+      if (!event.matches) return;
+      if (document.activeElement === menuButton.current || mobileNavigation.current?.contains(document.activeElement)) {
+        brandButton.current?.focus();
+      }
+      setOpen(false);
+    };
+    desktop.addEventListener('change', onDesktop);
+    return () => desktop.removeEventListener('change', onDesktop);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -42,7 +57,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
         Skip to content
       </a>
       <div className="container header-inner">
-        <button className="brand-mark" onClick={() => go('/')} type="button">
+        <button className="brand-mark" onClick={() => go('/')} ref={brandButton} type="button">
           VAI
         </button>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -63,7 +78,8 @@ export function Header({ activePath, navigate }: HeaderProps) {
           <VisuallyHidden>{open ? 'Close navigation' : 'Open navigation'}</VisuallyHidden>
         </button>
       </div>
-      <nav className={`mobile-nav ${open ? 'is-open' : ''}`} aria-hidden={!open} aria-label="Mobile navigation" id="mobile-navigation">
+      <nav className={`mobile-nav ${open ? 'is-open' : ''}`} aria-hidden={!open} inert={!open} aria-label="Mobile navigation" id="mobile-navigation" ref={mobileNavigation}>
+        <div className="mobile-nav-items">
           {navRoutes.map((route) => (
             <button
               className={activePath === route.path || (route.path === '/solutions' && activePath.startsWith('/solutions/')) ? 'mobile-nav-link active' : 'mobile-nav-link'}
@@ -76,6 +92,7 @@ export function Header({ activePath, navigate }: HeaderProps) {
               {route.label}
             </button>
           ))}
+        </div>
       </nav>
     </header>
   );

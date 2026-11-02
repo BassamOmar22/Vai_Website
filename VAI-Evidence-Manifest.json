@@ -1,0 +1,212 @@
+{
+  "version": "2.0",
+  "created": "2026-10-09",
+  "application_code_inspected": false,
+  "runtime_tests_run": false,
+  "github_connected_at_inspection": false,
+  "source_original_preserved_byte_for_byte": true,
+  "original_master_sha256": "5e2d9d357a4d30ff5b6603d23cb545d04839c2231ff210da659ade5b2dac6b1c",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2995,
+      "sha256": "8ab983dd77fbf13d983bb52c4f5415ba5e3705a8017000980faaaa86cc94a142"
+    },
+    {
+      "path": "Readme-Bassam.md",
+      "bytes": 2904,
+      "sha256": "5a68bcfe02cce012aa89afba6a8f7e96c8300b32aa13c4b1ef7c4221a851ba10"
+    },
+    {
+      "path": "VAI-Codex-Visual-RD-Prompt.md",
+      "bytes": 28916,
+      "sha256": "c4442cf8d8221437f02755653327f21620a34a084f95372952f7082a840ca420"
+    },
+    {
+      "path": "VAI-Content-Review-Requests.md",
+      "bytes": 2135,
+      "sha256": "cb933206866a1078f13802ca25417d68ad9569cc0cd04990371a1df7c796893b"
+    },
+    {
+      "path": "VAI-Design-Comparison-Matrix.md",
+      "bytes": 4209,
+      "sha256": "dd9b3441db462977310115dc823cc6e3746a7a122f95198bb86845ed38f6054d"
+    },
+    {
+      "path": "VAI-Design-Decision-Register.json",
+      "bytes": 14678,
+      "sha256": "86b91701128564e84249b4695f9384a321bb4d8caa00c642c9b68e00ec7340b4"
+    },
+    {
+      "path": "VAI-Frontend-Design-Master.md",
+      "bytes": 48250,
+      "sha256": "621bd6964ac2738d0a4d2103590bbc87cc995a4a0d8762908b8e8cd6939ec528"
+    },
+    {
+      "path": "VAI-Persistence-Receipt.json",
+      "bytes": 1514,
+      "sha256": "81082c8d792e4bd694295e1d635640dd2b217cf2091cd16c780217f2cbf5aa74"
+    },
+    {
+      "path": "VAI-Project-Instructions.txt",
+      "bytes": 2351,
+      "sha256": "971c40035604cd0fcedbcd92a6961688a4a6c0973bb74046f7b03b1dc84ea4cf"
+    },
+    {
+      "path": "VAI-Research-References.md",
+      "bytes": 3455,
+      "sha256": "f354a78f64d247f6277dd174aeb364f95bb8f57e5cd7218a7193d495705a804e"
+    },
+    {
+      "path": "references/SITE-VISUAL-GUIDE.md",
+      "bytes": 9413,
+      "sha256": "fc11e82bfd764edd09c13b987e9ff9bdadfa6f3d6652232f21e0e04aa2e7ce46"
+    },
+    {
+      "path": "references/about.png",
+      "bytes": 419419,
+      "sha256": "2751404407ab43e64009fd20f0d87d05f6d2e4f2df6cafa5e263c2ccf1bf0a76",
+      "dimensions": [
+        1425,
+        3007
+      ]
+    },
+    {
+      "path": "references/architecture-governance.png",
+      "bytes": 469423,
+      "sha256": "7b9d492e995147bb7caf04dea376ef10f7c14f6a511986e48b8c107da93ce69e",
+      "dimensions": [
+        1425,
+        3546
+      ]
+    },
+    {
+      "path": "references/automotive.png",
+      "bytes": 405759,
+      "sha256": "1e860762a8529273df23e30d42c033053104eda41f2db331567f5d553c32c05f",
+      "dimensions": [
+        1425,
+        3550
+      ]
+    },
+    {
+      "path": "references/construction.png",
+      "bytes": 461408,
+      "sha256": "bafa52c15b039df26248e2c207ff76f4da605b41c7f8a8af763608ad5c4980b2",
+      "dimensions": [
+        1425,
+        3475
+      ]
+    },
+    {
+      "path": "references/contact.png",
+      "bytes": 422999,
+      "sha256": "d4191c7f7b07162fbc6f1f43a2bf41636fd908ab3ca795748f57e2270c57f1c9",
+      "dimensions": [
+        1425,
+        2155
+      ]
+    },
+    {
+      "path": "references/fmcg.png",
+      "bytes": 451396,
+      "sha256": "9faf7bd904d67198bb34cfcdd0a3e0adce295e75c7281f35c48547800c4f727e",
+      "dimensions": [
+        1425,
+        3378
+      ]
+    },
+    {
+      "path": "references/home.png",
+      "bytes": 496659,
+      "sha256": "8cccff45605d30328c6054eaea116441648dd7032ab8d2753ddbfe2d8f160a62",
+      "dimensions": [
+        1425,
+        5725
+      ]
+    },
+    {
+      "path": "references/hospitality.png",
+      "bytes": 462180,
+      "sha256": "47e71c4cf72cee768d983d6c70b9fc878cc988a40f075452efbd215cee1b379b",
+      "dimensions": [
+        1425,
+        3547
+      ]
+    },
+    {
+      "path": "references/privacy.png",
+      "bytes": 96052,
+      "sha256": "90a1b891cd85fffa7aca0c8eb5e037f293a192c1abdad86bf40320628634c88e",
+      "dimensions": [
+        1425,
+        1824
+      ]
+    },
+    {
+      "path": "references/retail.png",
+      "bytes": 464047,
+      "sha256": "692791123cfa224edeacb69e04812d1d9f28f1b8f16785ac8081d28b47f6ff90",
+      "dimensions": [
+        1425,
+        3280
+      ]
+    },
+    {
+      "path": "references/solutions.png",
+      "bytes": 482941,
+      "sha256": "318d8f766aa67746bec2b7a172763db65cb4da5c116b71fa585949d94ec6cb91",
+      "dimensions": [
+        1425,
+        2295
+      ]
+    },
+    {
+      "path": "references/terms.png",
+      "bytes": 88173,
+      "sha256": "c397cbf1a69433099f9fb948c11d5d4b1446b917a2a235cddbf69da516f53b89",
+      "dimensions": [
+        1425,
+        1852
+      ]
+    },
+    {
+      "path": "references/thank-you.png",
+      "bytes": 24089,
+      "sha256": "b0a31440a489af081f1fc657a2ec58160dc3878dc64ab95f475f0fc97d7a11fe",
+      "dimensions": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "path": "references/vai-in-practice.png",
+      "bytes": 448961,
+      "sha256": "d0343d7d68c8c5cbcb040af3801889fe887075af7c0d3ba7dc10c739dd8da2f3",
+      "dimensions": [
+        1425,
+        2661
+      ]
+    },
+    {
+      "path": "sources/Founder-Handoff-Excerpt.txt",
+      "bytes": 14211,
+      "sha256": "e49985e49704a0e7b75eac329ba7ba895c16c6972a6798ad3450f45addc2eb02"
+    },
+    {
+      "path": "sources/Historical-Screenshot-Review-v1.md",
+      "bytes": 9664,
+      "sha256": "d6fae9e6adece00b29ad3229746ea4d16a3b0922936c8cc4ff72d24c2f217d5a"
+    },
+    {
+      "path": "sources/Historical-Visual-Motion-Prompt-v1.md",
+      "bytes": 26737,
+      "sha256": "462d9309a8859ef9d2d974d8eb7c6bc8842ffa37ad9cc92dbac443a07d2ac780"
+    },
+    {
+      "path": "sources/VAI-Frontend-Visual-Design-Original.txt",
+      "bytes": 27038,
+      "sha256": "5e2d9d357a4d30ff5b6603d23cb545d04839c2231ff210da659ade5b2dac6b1c"
+    }
+  ]
+}

@@ -77,7 +77,84 @@ export const practice = { hero: { eyebrow: 'VAI in Practice', heading: 'How VAI 
 
 export const governance = { hero: { eyebrow: 'Architecture & Governance', heading: 'Intelligence systems need architecture, ownership, and review.', body: 'VAI approaches AI and business intelligence as operating systems, not isolated tools. The work must connect business context, data inputs, workflow design, and governance.', primaryCta: 'Discuss governance' }, principles: { eyebrow: 'Governance principles', heading: 'Designed to stay useful, accountable, and understandable.', body: 'The strongest intelligence systems are built around clear ownership, responsible data use, and practical review.', cards: [{ title: 'Business-first architecture', body: 'The system starts from the operating decision, not from technology for its own sake.' }, { title: 'Clear ownership', body: 'Outputs should have owners, review points, and a defined role in the working rhythm.' }, { title: 'Responsible boundaries', body: 'Data, automation, and AI-supported outputs should be used within clear business and governance limits.' }] }, model: { eyebrow: 'Architecture model', heading: 'From context to governed output.', body: 'VAI connects business questions, data signals, intelligence logic, workflow design, and governance into one practical operating structure.', labels: ['Business question', 'Source signals', 'Intelligence logic', 'Workflow output', 'Human review', 'Governance loop'] }, controls: { eyebrow: 'Controls', heading: 'Control points keep intelligence work grounded.', body: 'VAI systems should be reviewed for accuracy, usefulness, data boundaries, workflow fit, and business accountability.', cards: [{ title: 'Data boundaries', body: 'Define what information is used, why it matters, and where limits apply.' }, { title: 'Human review', body: 'Keep decision ownership clear and avoid treating automation as unchecked authority.' }, { title: 'Continuous improvement', body: 'Update outputs as teams learn, workflows change, and new questions emerge.' }] }, cta: { heading: 'Build intelligence with the right controls.', body: 'Start with the workflow, decision, or data environment where structure and governance matter most.', action: 'Talk about architecture' } };
 
-export const about = { hero: { eyebrow: 'About VAI', heading: 'Commercial understanding and technical delivery in one practical approach.', body: 'VAI helps teams build intelligence systems that match how their business operates: the decisions they make, the workflows they run, and the responsibilities they carry.', primaryCta: 'Contact VAI' }, positioning: { eyebrow: 'Positioning', heading: 'VAI is built for practical business intelligence.', body: 'The work is not about adding technology for appearance. It is about creating systems that help teams see clearly, decide faster, and operate with more discipline.', cards: [{ title: 'Commercially grounded', body: 'VAI starts from business pressure, operating reality, and the decisions teams need to improve.' }, { title: 'Technically structured', body: 'VAI designs intelligence around data signals, workflow logic, governance, and maintainable delivery.' }, { title: 'Built for use', body: 'The output must fit the working rhythm of the team, not sit apart from daily operations.' }] }, ownership: { eyebrow: 'Delivery ownership', heading: 'One integrated website and one accountable delivery rhythm.', body: 'The project model is clear: Bassam owns delivery and integration, Hamza supports visual consistency and responsive polish, Omar supports backend and technical checks, and Kamal owns business facts and public positioning.', cards: [{ title: 'Bassam', body: 'Delivery owner for build, page assembly, integration, progress reporting, and release.' }, { title: 'Hamza', body: 'Supports typography, spacing, visual consistency, responsive cosmetics, and asset preparation.' }, { title: 'Omar', body: 'Supports backend, complex code, integration checks, and technical accuracy.' }, { title: 'Kamal', body: 'Reviews public positioning, business facts, and final readiness.' }] }, cta: { heading: 'Work with VAI on a focused intelligence workflow.', body: 'Start with the operating question that matters most, then build the structure around it.', action: 'Start a conversation' } };
+export const about = {
+  hero: {
+    eyebrow: 'ABOUT VAI',
+    heading: 'Commercial understanding and technical delivery in one practical approach.',
+    body: 'VAI helps teams build intelligence systems that match how their business operates: the decisions they make, the workflows they run, and the responsibilities they carry.',
+    primaryCta: 'Contact VAI',
+  },
+  positioning: {
+    eyebrow: 'Positioning',
+    paragraphs: [
+      'Every business generates information. Far fewer have the intelligence to anticipate what is coming, understand the consequences of their choices, and consistently make better decisions.',
+      'VAI Solutions is an Enterprise Decision Intelligence company built to close that gap.',
+      'We transform complex business information into clear, actionable decisions by bringing together advanced AI, predictive intelligence, scenario simulation, and governed decision-making in one connected system.',
+      'Positioned above existing ERP, BI, and operational platforms, VAI doesn’t replace the technology businesses already rely on. We make that technology considerably more intelligent, more predictive, and more valuable to the people making decisions.',
+      'Our philosophy is simple: Intelligence should not end with understanding what happened. It should help determine what happens next.',
+    ],
+    cards: [
+      { title: 'Commercially grounded', body: 'VAI starts from business pressure, operating reality, and the decisions teams need to improve.' },
+      { title: 'Technically structured', body: 'VAI designs intelligence around data signals, workflow logic, governance, and maintainable delivery.' },
+      { title: 'Built for use', body: 'The output must fit the working rhythm of the team, not sit apart from daily operations.' },
+    ],
+  },
+  overview: [
+    { number: '01', title: 'Understand', body: 'Uncover business drivers, risks and opportunities.', href: '#understand' },
+    { number: '02', title: 'Predict & Simulate', body: 'Forecast outcomes and compare alternative decisions.', href: '#predict-simulate' },
+    { number: '03', title: 'Decide & Govern', body: 'Act on evidence with human oversight and control.', href: '#decide-govern' },
+  ],
+  pillars: [
+    {
+      id: 'understand',
+      number: '01',
+      heading: 'Understand the Business Behind the Numbers',
+      emphasis: 'From fragmented data to meaningful business intelligence.',
+      paragraphs: [
+        'VAI connects commercial, financial, and operational signals to uncover performance drivers, emerging risks, hidden inefficiencies, and opportunities that traditional reporting can overlook.',
+        'Through specialized AI agents and structured decision reasoning, we move beyond presenting information to understanding what is changing, why it matters, and which decisions deserve attention.',
+      ],
+    },
+    {
+      id: 'predict-simulate',
+      number: '02',
+      heading: 'Predict the Future. Simulate the Possibilities.',
+      emphasis: 'From reacting to events to anticipating their consequences.',
+      paragraphs: [
+        'Our predictive AI models forecast business developments, while scenario simulation allows leaders to explore alternative decisions before committing resources.',
+        'What happens if prices change? Demand falls? Inventory accumulates? Project schedules slip? Operational capacity becomes constrained?',
+        'VAI evaluates possible outcomes, exposes trade-offs, and quantifies potential business impact—helping leaders distinguish between what is likely, what is possible, and what is worth doing.',
+      ],
+    },
+    {
+      id: 'decide-govern',
+      number: '03',
+      heading: 'Turn Intelligence Into Decisions You Can Trust',
+      emphasis: 'From sophisticated analysis to accountable business action.',
+      paragraphs: [
+        'VAI brings predictions, simulations, business rules, and specialized AI reasoning together into a structured Decision Intelligence Pack.',
+        'Each decision is supported by its underlying evidence, expected impact, confidence, risks, and alternatives.',
+        'Human oversight, defined approval authority, and governance remain central to the process. Intelligence supports the decision. People retain control.',
+        'The result is a more disciplined, repeatable way to make high-stakes business decisions—and evaluate their outcomes over time.',
+      ],
+    },
+  ],
+  differentiators: [
+    { title: 'A new intelligence layer', body: 'VAI operates above existing business systems rather than competing with ERP and BI.' },
+    { title: 'Specialized AI intelligence', body: 'We combine data signals, agentic reasoning, and business context.' },
+    { title: 'Predictive and simulation capabilities', body: "We don't merely analyze the past. We help businesses anticipate and evaluate different futures." },
+    { title: 'Governed decisions', body: 'Our recommendations are supported by evidence, confidence, risk assessment, and human authority.' },
+    { title: 'Cross-industry applicability', body: 'Our core approach can be applied to different business functions and sectors without positioning VAI as a generic software provider.' },
+  ],
+  closing: {
+    heading: 'Built Around Real Business Decisions',
+    body: 'From commercial performance, pricing, and profitability to demand, inventory, project execution, hospitality operations, and supply chains, VAI applies one powerful principle across industries:',
+    principle: 'Predict what matters. Simulate what is possible. Decide with confidence and control.',
+    conviction: "VAI isn't selling AI for the sake of AI. We are building the intelligence that helps businesses make better decisions, before the consequences of those decisions become reality.",
+    signoff: 'VAI Solutions — Decision acceleration with control.',
+  },
+  cta: { heading: 'Work with VAI on a focused intelligence workflow.', body: 'Start with the operating question that matters most, then build the structure around it.', action: 'Start a conversation' },
+};
 
 export const contactCopy = { hero: { eyebrow: 'Contact', heading: 'Start with the workflow or decision that needs more clarity.', body: 'Tell VAI what the team is trying to understand, improve, or automate. The first step is to frame the business question clearly.', primaryCta: 'Go to enquiry form' }, form: { eyebrow: 'Enquiry', heading: 'Share the operating problem.', body: 'Use the form to describe the business area, industry, and workflow where better intelligence would help.', consent: 'I agree that VAI may use the information submitted in this form to review and respond to my enquiry.', submit: 'Send enquiry', sending: 'Sending enquiry...', backendError: 'The enquiry could not be sent.', backendErrorBody: 'Please try again. If the issue continues, contact VAI directly through your usual channel.' } };
 
